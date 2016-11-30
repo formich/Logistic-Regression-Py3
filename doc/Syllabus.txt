@@ -1,0 +1,21 @@
+1. Write a function z(x) that takes a real value x and returns the sigmoid function evaluated in x.
+
+
+
+2. Write a function h(theta, X) that takes a real array theta of length m and a real matrix X of size n-by-m, and returns a vector of length n whose i-th entry is the sigmoid function evaluated at <theta, X[i]> (<•,•> denotes inner product).
+
+
+
+2. Write a function gradient(theta, X, Y) that computes the gradient of the log-likelihood function of the logistic model on the points (X, Y), evaluated at theta. The inputs are: a real array theta of length m, a real array X of size n-by-m, and a binary array Y of length y (that is, each entry of Y is either 0 or 1). The output is a real array of the same length as theta.
+
+
+
+3. Write a function logfit(X, Y, alpha, itr) that performs a gradient ascent to find the vector of parameters theta that maximize the log-likelihood on the points (X,Y). The inputs are a real matrix X of size n-by-m, a binary array Y of length n, the stepsize alpha, and the maximum number of iterations itr.
+
+
+
+4. Write a function tprfpr(P, Y). The function takes in input a vector of estimated probabilities P and a vector of labels Y, both of length n. It returns a tuple of two arrays (tpr, fpr) whose i-th entries are the true positive rate and false positive rate obtained when as threshold we use the i-th smallest element of P (i.e. we predict label 1 for all entries of P having value at least equal to the i-th smallest element of P). Note that the P given in input need not be sorted.
+
+
+
+5. Write a function auc(fpr, tpr) that takes in input the two vectors of true positive rate and false positive rate, and computes the Area Under the Curve.
